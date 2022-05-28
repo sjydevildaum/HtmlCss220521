@@ -10,7 +10,7 @@
     /* 붙여넣기 시 해당 텍스트 포맷 여부. */
     "editor.formatOnPaste": false,
     /* 기본 Formatter 설정 */
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.snippetSuggestions": "top",
     "editor.fontSize": 20,
     "editor.renderWhitespace": "all",
