@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>CSS3 Selector Basic Page</title>
 
-    <!-- html 주석 : 내부 스타일 시트 -->
-
-
-
     <!-- html 주석 :외부 스트일 표기법 link 태그 사용 -->
-</head>
+    <link rel="stylesheet" href="./style.css" />
 
-<body>
+    <!-- html 주석 : 내부 스타일 시트 -->
+    <style>
+      h1 {
+        color: red;
+      }
+      h2 {
+        color: orange;
+      }
+      h3 {
+        color: blue;
+      }
+      h4 {
+        color: green;
+      }
+      h4 {
+        color: #008800;
+      }
+      h5 {
+        color: #00880088;
+      }
 
+      p {
+        text-align: center;
+      }
+
+      ul {
+        color: blue;
+        list-style-type: square;
+      }
+      /*  */
+    </style>
+  </head>
+
+  <body>
     <!-- 인라인 스타일 시트 -->
-    <h1 style="color:red;">제목 글자</h1>
+    <h1 style="color: red">제목 글자</h1>
     <h1>제목 글자</h1>
 
     <!-- 내부 스타일 시트 -->
@@ -24,23 +51,20 @@
     <h4>제목 글자</h4>
     <h5>제목 글자</h5>
 
-    <hr>
+    <hr />
 
     <h2>스타일 표기법</h2>
-    <p> 단락 </p>
+    <p>단락</p>
 
-    <hr>
+    <hr />
     <h2>내부 스타일 시트</h2>
     <ul>
-        <li>a</li>
-        <li>b</li>
-        <li>c</li>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
     </ul>
-
-    <div class="myclass">
-
-    </div>
-
-</body>
-
-</html>
+<!--  -->
+    <!--  -->
+    <div class="myclass"></div>
+  </body>
+</html>
