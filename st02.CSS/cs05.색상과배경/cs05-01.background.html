@@ -6,14 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>배경 이미지</title>
     <style>
-        /* CSS 초기화 */
-        * { padding: 0; margin: 0; box-sizing: content-box;}
-
+        /* CSS 초기화. 목적은 브라우저 default CSS 설정 제거 */
+        * {
+            margin: 0; /* 0 0 0 0 */
+            padding: 0; /* 0 0 0 0 */
+            box-sizing: content-box;
+        }
+        
         /* body 태그에 배경 이미지 설정: ./image/bg1.png */
         body {
             background-image: url(./images/bg1.png);
+            background-repeat: no-repeat; /* 반복 없음 */
+            background-repeat: repeat-x; /* x축으로 반복 */
+            background-repeat: repeat-y; /* y축으로 반복 */
+            background-repeat: repeat; /* x,y축으로 반복. 디폴트값. 생략하면 자동 적용됨 */
         }
 
+        /* background-color */
+        /* div id="color" */
         #color {
             background-color: aqua;
         }
@@ -22,6 +32,7 @@
             border: 1px solid #000000;
             margin: 50px 50px 0 0;
         }
+
         /*
         id="clip"의 자식 div 태그에 아래의 스타일 속성을 적용하여 보자.
         테두리 설정
@@ -41,9 +52,15 @@
             display: inline-block;
             box-sizing: content-box;
         }
-        #clip > .bg1 { background-clip: border-box; }
-        #clip > .bg2 { background-clip: padding-box; }
-        #clip > .bg3 { background-clip:  content-box; }
+        #clip > div.bg1 {
+            background-clip: border-box; /* 기본값. border 영역부터 그린다 */
+        }
+        #clip > div.bg2 {
+            background-clip: padding-box; /* padding 영역부터 그린다 */
+        }
+        #clip > div.bg3 {
+            background-clip: content-box; /* content 영역부터 그린다 */
+        }
 
         /*
         id="origin"의 자식 div 태그에 스타일을 적용하여 보자.
@@ -68,9 +85,15 @@
             background-image: url( ./images/bg5.png );
             background-repeat: no-repeat;
         }
-        #origin > .bg1 { background-origin: border-box; }
-        #origin > .bg2 { background-origin: padding-box; }
-        #origin > .bg3 { background-origin: content-box; }
+        #origin > div.bg1 {
+            background-origin: border-box;
+        }
+        #origin > div.bg2 {
+            background-origin: padding-box;/*기본값*/
+        }
+        #origin > div.bg3 {
+            background-origin: content-box;
+        }
 
         /*
         background-position 스타일 속성을 적용하여 보자.
@@ -93,9 +116,18 @@
             padding: 150px 0 20px 0 ;
             margin: 10px 0 0 0;
         }
-        #position > .bg1 { background-position: top; }
-        #position > .bg2 { background-position: center; }
-        #position > .bg3 { background-position: bottom; }
+        #position > div.bg1 {
+            background-position: top left  ; /* left: x축 디폴트 , top: y축 디폴트 */
+        }
+        #position > div.bg2 {
+            background-position: center center ; /* left: x축 디폴트 , top: y축 디폴트 */
+        }
+        #position > div.bg3 {
+            background-position: bottom left  ; /* left: x축 디폴트 , top: y축 디폴트 */
+        }
+        #position > div.bg4 {
+            background-position: bottom right   ; /* left: x축 디폴트 , top: y축 디폴트 */
+        }
 
         /*
         id="size" 의 자식 div 에 아래의 속성을 적용한다.
@@ -118,13 +150,24 @@
             height: 300px;
             display: inline-block;
         }
-        #size > .bg1 { background-size: auto; }
-        #size > .bg2 { background-size: 200px 150px; }
-        #size > .bg3 { background-size: 60% 40%; }
-        #size > .bg4 { background-size: contain; }
-        #size > .bg5 { background-size: cover; }
-        #size > .bg6 { background-size: 100% 100%; }
-
+        #size > div.bg1 {
+            background-size: auto; /* 기본값 */
+        }
+        #size > div.bg2 {
+            background-size: 200px 150px; /* x축:200px, y축:150px */
+        }
+        #size > div.bg3 {
+            background-size: 60% 40%; /* x축:60%, y축:40% */
+        }
+        #size > div.bg4 {
+            background-size: contain;
+        }
+        #size > div.bg5 {
+            background-size: cover;
+        }
+        #size > div.bg6 {
+            background-size: 100% 100%; /* x축:100%, y축:100% */
+        }
     </style>
 </head>
 <body>
@@ -168,7 +211,7 @@
                 잘 알려져 있듯이 블루베리와 함께 대표적인 항산화 음식이기도 하다.
             </p>
         </div>
-    </div> <!--  <--- ::after  -->
+    </div>
 
     <div id="origin">
         <h2>background-origin</h2>

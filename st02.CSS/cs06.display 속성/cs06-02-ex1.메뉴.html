@@ -34,6 +34,11 @@
             list-style-type: none;
             margin: 0 20px 0 0 ;
         }
+        #float::after {
+            clear: both;
+            display: block;
+            content: '';
+        }
         #float > li > a {
             text-decoration: none;
         }

@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>동영상 배경</title>
+    <style>
+        /* CSS 초기화 */
+        * { margin: 0; padding : 0; }
+
+        /* 꽉찬 페이지 배경 이미지 설정 
+            1. 배경 이미지  경로
+            2. 배경 이미지 반복 여부
+            3. 배경 이미지 사이즈 : 자동 넓히기 
+            4. 배경 이미지 스크롤 여부 설정 
+            5. min-width, min-height 설정.
+        */
+        #bg {
+            background-image: url( ../images/flame.jpg);
+            background-repeat: no-repeat; /* 배경 이미지 한번만 출력 */
+            background-size: cover; /* 자동 넓히기 */
+            background-attachment: fixed;
+            
+            /* 동영상을 화면에 꽉 차게 채우기 */
+            min-width: 100%; /* x축 - 꽉찬 화면 */
+            min-height: 100%; /* y축 - 꽉찬 화면 */
+
+            /* 동영상 위치 고정 */
+            position: fixed;
+            left: 0; /* x축 */
+            top : 0; /* y축 */            
+        }
+        
+        /* container 태그의 수직 위치 설정 방법
+            1. padding 을 사용하여 위쪽에 안쪽 여백 주기. calc() 
+            2. margin 을 사용하여 위쪽에 바깥 여백 주기.  calc()
+            3. position 을 사용하여 위치 지정하기.
+                x축 : left:px -->  right --> margin-left: %
+                y축 : top :px --> bottom --> margin-top : %
+        */
+        #container {
+            position: fixed;
+            /* left: 600px ;  x축 */
+            /* top : 300px; y축 */
+            /* margin-left: 50%;  x축 */
+            /* margin-top: 30%;   y축 */
+            right : 50px; /* x축 : left:px -->  right --> margin-left: % */
+            bottom: 30px; /* y축 : top :px --> bottom --> margin-top : % */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <pre>

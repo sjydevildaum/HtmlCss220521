@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>배경 이미지</title>
+    <style>
+        /* CSS 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 페이지 에 배경 이미지 넣기 : ./image/bg3.jpg */
+        body {
+            background-image: url( ./images/bg3.jpg );
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-attachment: fixed; /* 스크롤시 배경 이미지 고정. 기본값 */
+        }
+        /* 수평 가운데 정렬. 반투명 처리 */
+        #wrap {
+            width: 80%;
+            margin: auto; /* 태그의 수평 가운데 정렬 */
+            background-color: rgba( 255, 255, 255, 0.7); /* 반투명한 배경색 */
+        }
+    </style>
 </head>
 
 <body>
-    <div>
+    <div id="wrap">
         <h2>블루베리(Blueberry)</h2>
         <p>
             블루베리의 대표적인 기능은 항산화로 비타민A, C, E가 풍부하고

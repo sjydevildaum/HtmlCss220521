@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML5 기초 문서</title>
     <style>
+        /* CSS 초기화 */
         * {padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+        /* 꽉찬 페이지 배경 이미지 설정방법
+            1. 배경 이미지 경로
+            2. 배경 이미지 반복 여부 
+            3. 배경 이미지 사이즈 
+            4. 스크롤시 배경 이미지 고정 설정
+            5. min-width 설정. x축으로 꽉찬 화면 
+            6. min-height 설정. y축으로 꽉찬 화면
+        */
         html {
-            height: 100%;
+            height: 100%;/* y축으로 꽉찬 화면 */ 
         }
         body {
-            height: 100%;
+            height: 100%;/* y축으로 꽉찬 화면 */ 
+        }
+        h1, h2 {
+            color: #369ff7;
         }
         #wrap {
             font-family: "맑은 고딕";
@@ -22,9 +34,6 @@
             background-attachment: fixed;
             min-width: 100%;
             min-height: 100%;
-        }
-        h1, h2 {
-            color: #369ff7;
         }
     </style>
 </head>

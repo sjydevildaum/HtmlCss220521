@@ -7,21 +7,22 @@
     <title>display 속성</title>
     <style>
         * {padding:0; margin: 0; box-sizing: content-box;}
-        div > div {
-            border: 1px solid black;
+        #container > div {
             width: 100px;
             height: 100px;
             margin: 10px 20px 10px 20px ;
+            border: 2px solid black;
         }
         .ex1 {
-            background-color: aqua;
+            background-color: lightblue;
         }
         .ex2 {
-            background-color: blueviolet;
+            background-color: lightgreen;
         }
         .ex3 {
-            background-color: brown;
+            background-color: lightyellow;
         }
+
         #float > div {
             float: left;
         }
@@ -30,11 +31,14 @@
             display:block;
             content:'';
         }
+
         #inlineblock > div {
             display: inline-block;
         }
+
         #flex {
             display: flex;
+           flex-direction: row;
         }
     </style>
 </head>
