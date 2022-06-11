@@ -5,6 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>display 속성</title>
+    <style>
+        #inline {
+            border: 2px solid gray;
+            border-radius: 10px;
+            margin: 10px 0 10px 0;
+            padding: 10px 10px 10px 10px;
+        }
+        #inline > img {
+            padding: 10px 0 0 0;
+        }
+
+        #block {
+            border: 2px solid gray;
+            border-radius: 10px;
+            margin: 10px 0 10px 0;
+            width: 300px;
+        }
+        #block > img {
+            display: block;
+            margin: auto;
+            padding: 10px 0 0 0;
+        }
+    </style>
 </head>
 <body>
     <h2>display 속성</h2>
@@ -25,10 +48,11 @@
         <img src="../images/pic2.jpg">
         <img src="../images/pic3.jpg">
     </div>
+
     <div id="block">
         <img src="../images/pic1.jpg">
         <img src="../images/pic2.jpg">
         <img src="../images/pic3.jpg">
     </div>
 </body>
-</html>
+</html>

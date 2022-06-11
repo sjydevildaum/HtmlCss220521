@@ -5,30 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0; box-sizing: border-box;}
+        body { margin: 30px;}
+        div {
+            border: 1px solid rgb(220, 10, 164);
+            padding: 40px;
+            margin: 20px 0;
+            background-color: blueviolet;
+        }
+        div > ul {
+            background-color: white;
+            padding: 20px 20px 20px 60px;
+        }
+        #display > li {
+            display: inline-block;
+            width: 60px;
+        }
+        #display > li > a {
+            text-decoration: none;
+        }
+
+        #float {
+            padding: 20px 0 50px 60px;
+        }
+        #float > li {
+            float: left;
+            list-style-type: none;
+            margin: 0 20px 0 0 ;
+        }
+        #float > li > a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    
+
     <h2>CSS 적용 안된 것</h2>
-    <ul>
-        <li><a href="http://">메뉴1</a></li>
-        <li><a href="http://">메뉴2</a></li>
-        <li><a href="http://">메뉴3</a></li>
-    </ul>
-    <hr>
-    
-    <h2>float 적용한 경우</h2>
-    <ul id="float">
-        <li><a href="http://">메뉴1</a></li>
-        <li><a href="http://">메뉴2</a></li>
-        <li><a href="http://">메뉴3</a></li>
-    </ul> <!-- float 해제 -->
+    <div>
+        <ul>
+            <li><a href="http://">메뉴1</a></li>
+            <li><a href="http://">메뉴2</a></li>
+            <li><a href="http://">메뉴3</a></li>
+        </ul>
+    </div>
     <hr>
 
     <h2>display: inline-block; 적용한 경우</h2>
-    <ul  id="display">
-        <li><a href="http://">메뉴1</a></li>
-        <li><a href="http://">메뉴2</a></li>
-        <li><a href="http://">메뉴3</a></li>
-    </ul>
+    <div>
+        <ul id="display">
+            <li><a href="http://">메뉴1</a></li>
+            <li><a href="http://">메뉴2</a></li>
+            <li><a href="http://">메뉴3</a></li>
+        </ul>
+    </div>
+    <hr>
+
+    <h2>float 적용한 경우</h2>
+    <div>
+        <ul id="float">
+            <li><a href="http://">메뉴1</a></li>
+            <li><a href="http://">메뉴2</a></li>
+            <li><a href="http://">메뉴3</a></li>
+        </ul> <!-- float 해제 -->
+    </div>
+    <hr>
+
 </body>
 </html>
