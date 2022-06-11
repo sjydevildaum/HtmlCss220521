@@ -5,6 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>배경 이미지</title>
+    <style>
+        /* CSS 초기화 */
+        * { padding: 0; margin: 0; box-sizing: content-box;}
+
+        /* body 태그에 배경 이미지 설정: ./image/bg1.png */
+        body {
+            background-image: url(./images/bg1.png);
+        }
+
+        #color {
+            background-color: aqua;
+        }
+        #color > div {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            margin: 50px 50px 0 0;
+        }
+        /*
+        id="clip"의 자식 div 태그에 아래의 스타일 속성을 적용하여 보자.
+        테두리 설정
+        안쪽 여백 설정
+        바깥 여백 설정
+        배경색 설정
+        너비 설정
+        수직 --> 수평 변환 설정.
+        box-sizing 적용
+        */
+        #clip > div {
+            border: 25px dotted #000000;
+            padding: 40px 40px 40px 40px ;
+            margin: 20px 20px 20px 20px;
+            background-color: lightblue;
+            width: 20%;
+            display: inline-block;
+            box-sizing: content-box;
+        }
+        #clip > .bg1 { background-clip: border-box; }
+        #clip > .bg2 { background-clip: padding-box; }
+        #clip > .bg3 { background-clip:  content-box; }
+
+        /*
+        id="origin"의 자식 div 태그에 스타일을 적용하여 보자.
+            테두리 설정
+            안쪽 여백 설정
+            바깥 여백 설정
+            box-sizing 적용
+            배경색 설정
+            너비 설정
+            수직 --> 수평 변환 설정.
+            배경이미지 ==> ./images/bg5.png
+        background-origin 스타일 속성을 적용하여 보자
+        */
+        #origin > div {
+            border: 25px solid #e8e8e8;
+            padding: 40px 40px 40px 40px ;
+            margin: 20px 20px 20px 20px;
+            background-color: lightblue;
+            width: 20%;
+            display: inline-block;
+            box-sizing: content-box;
+            background-image: url( ./images/bg5.png );
+            background-repeat: no-repeat;
+        }
+        #origin > .bg1 { background-origin: border-box; }
+        #origin > .bg2 { background-origin: padding-box; }
+        #origin > .bg3 { background-origin: content-box; }
+
+        /*
+        background-position 스타일 속성을 적용하여 보자.
+
+        배경 이미지 설정  ==> ../images/bg2.jpg
+        배경 이미지 반복 안되게
+        너비 700px 설정
+        높이 150px 설정
+        안쪽 여백
+            위쪽 150 px 설정
+            아래쪽 20 px 설정
+        바깥  여백
+            위쪽에만 10 px 설정
+        */
+        #position > div {
+            background-image: url( ../images/bg2.jpg);
+            background-repeat: no-repeat;
+            width: 700px;
+            height: 150px;
+            padding: 150px 0 20px 0 ;
+            margin: 10px 0 0 0;
+        }
+        #position > .bg1 { background-position: top; }
+        #position > .bg2 { background-position: center; }
+        #position > .bg3 { background-position: bottom; }
+
+        /*
+        id="size" 의 자식 div 에 아래의 속성을 적용한다.
+        배경이미지: ../images/bg4.jpg;
+        배경이미지는 한번만 나오게
+        배경이미지의 위치는 top left 이 되게
+        테두리: 1px solid #000000;
+        오른쪽과 아래쪽에 바깥 여백 20px 주기
+        너비: 300px;
+        높이: 300px;
+        수직 --> 수평 변환 설정.
+        */
+        #size > div {
+            background-image: url( ../images/bg4.jpg);
+            background-repeat: no-repeat;
+            background-position: top left;
+            border: 1px solid #000000;
+            margin: 0 20px 20px 0;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+        }
+        #size > .bg1 { background-size: auto; }
+        #size > .bg2 { background-size: 200px 150px; }
+        #size > .bg3 { background-size: 60% 40%; }
+        #size > .bg4 { background-size: contain; }
+        #size > .bg5 { background-size: cover; }
+        #size > .bg6 { background-size: 100% 100%; }
+
+    </style>
 </head>
 <body>
 
@@ -18,7 +139,7 @@
             카카오 매스의 함량에 따라 다크 초콜릿, 밀크 초콜릿, 화이트 초콜릿으로 구분한다.</p>
         </div>
     </div>
-        
+
     <div id="clip">
         <h2>background-clip</h2>
         <div class="bg1">
@@ -47,7 +168,7 @@
                 잘 알려져 있듯이 블루베리와 함께 대표적인 항산화 음식이기도 하다.
             </p>
         </div>
-    </div> <!--  <--- ::after  --> 
+    </div> <!--  <--- ::after  -->
 
     <div id="origin">
         <h2>background-origin</h2>
@@ -131,4 +252,4 @@
         <div class="bg6">배경 이미지 사이즈 : 100% 100%</div>
     </div>
 </body>
-</html>
+</html>

@@ -4,21 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>배경 스타일</title>
+    <title>배경 스타일</title>
+    <style>
+        * {padding: 0; margin: 0; box-sizing: content-box;}
+
+        .container {
+            background-image: url(../images/apple-bg.jpg);
+            background-repeat: no-repeat;
+            width: 640px;
+
+            /* 태그의 수직 위치 설정 방법 - padding 을 사용하여 위쪽에 안쪽 여백 주기 */
+            padding: 300px 0 10px 0;
+        }
+        .content {
+            width: 90%;
+
+            /* 배경색 설정하기 */
+            background-color: rgba(255, 255, 255, 0.5);
+
+            /* 태그의 수평 가운데 정렬 */
+            margin: auto;
+            
+            /* 태그의 수직 위치 설정 방법 - position 을 사용하여  위치 지정하기
+            position: relative;
+            left:  20px;
+            top : 300px;*/
+        }
+        .content>h1 {
+            /* 텍스트의 수직 정렬 */
+            line-height: 2;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-	<!-- background-image를 이용하여 배경 이미지 추가 -->
-	<div class="container">
-	    <div class="content">
-	        <h1>하루 한 알의 사과는 의사를 멀리 한다</h1>
-	    </div>
-	</div>
+    <!-- background-image를 이용하여 배경 이미지 추가 -->
+    <div class="container">
+        <div class="content">
+            <h1>하루 한 알의 사과는 의사를 멀리 한다</h1>
+        </div>
+    </div>
 
-	<pre>
-	태그의 수직 위치 설정 방법
-		1. padding 을 사용하여 위쪽에 안쪽 여백 주기. --> .container 에 설정
-		2. margin 을 사용하여 위쪽에 바깥 여백 주기.  --> .content 에 설정
-		3. position 을 사용하여 위치 지정하기.
-	</pre>
+    <pre>
+    태그의 수직 위치 설정 방법
+        1. padding 을 사용하여 위쪽에 안쪽 여백 주기. --> 부모(.container) 에 설정
+        2. position 을 사용하여 위치 지정하기.
+    </pre>
 </body>
-</html>
+</html>
