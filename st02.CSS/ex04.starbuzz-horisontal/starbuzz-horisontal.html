@@ -6,6 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Starbuzz Coffee</title>
+    <style>
+        /* CSS 초기화 */
+        *  { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+
+        body {
+          background-color: #b5a789;
+          font-family: "맑은 고딕";
+        }
+
+        a { text-decoration: none; }
+        a:link { color: #b76666; }
+        a:visited {  color: #675c47; }
+        a:active {  }
+
+        #header {
+          background-color: #675c47;
+          margin: 10px;
+        }
+
+        #drinks {
+            background-color: #efe5d0 ;
+            background-image: url(./images//background.gif);
+            background-position: top left;
+            margin: 0 10px 10px 10px; /* 테두리 */
+            padding: 15px;
+        }
+
+        #main {
+          background-color: #efe5d0 ;
+          background-image: url(./images//background.gif);
+          background-position: top left;
+          margin: 0 10px 10px 10px; /* 테두리 */
+          padding: 15px;
+        }
+
+        #sidebar {
+          background-color: #efe5d0;
+          background-image: url( ./images/background.gif);
+          background-position: bottom right;
+          margin: 0 10px 10px 10px; /* 테두리 */
+          padding: 15px;
+        }
+        #footer {
+          background-color: #675c47;
+          margin: 0 10px 10px 10px; /* 테두리 */
+          color: #efe5d0;
+          text-align: center;
+          padding: 15px;
+        }
+        #sidebar > p.beanheading {
+          text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,13 +82,13 @@
                 <p>Mocha Cafe Latte, $2.35</p>
                 <p>Cappuccino, $1.89</p>
                 <p>Chai Tea, $1.85</p>
-                
+
                 <div id="coupon">
                     <a href="freecoffee.html" title="Click here to get your free coffee">
                         <img src="images/ticket.gif" alt="Starbuzz coupon ticket">
                     </a>
                 </div>
-				
+
                 <h1>ELIXIRS</h1>
                 <p>
                     We proudly serve elixirs brewed by our friends
