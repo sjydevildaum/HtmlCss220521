@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>div 안에 div 가운데 정렬</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* CSS 초기화 */
+        *  { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+
+        /* table, tr, td 에 줄 border 그리기 : 1px 실선 회색 */
+        table, tr, td { border: 1px solid gray; border-collapse: collapse;}
+
+        div { text-align: center;}
+
+        /* div class="p" */
+        div.p {
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        /* div class="c" */
+        div.c {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .outer {
+            width: 400px;
+            height: 200px;
+            background-color: red;
+            display: table;
+        }
+        .inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .centered {
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+        }
+    </style>
 </head>
 <body>
     <h1> 수평 가운데 정렬 </h1>
@@ -20,13 +60,14 @@
             <td>margin-top: 50px;</td>
         </tr>
     </table>
+
     <div class="p" style="text-align:center;">
         <div class="c" style="margin: auto; margin-top: 50px; ">
             test
         </div>
     </div>
     <hr >
-	
+
     <h2>display:inline-block; </h2>
 	<table>
         <tr>
@@ -35,16 +76,16 @@
         </tr>
         <tr>
             <td>수직 중간 정렬</td>
-            <td>padding-top: 50px;</td>
+            <td>margin-top: 50px;</td>
         </tr>
     </table>
-    <div class="p" style="padding:50px 0 0 0;">
-        <div class="c" style="display:inline-block;">
+    <div class="p">
+        <div class="c" style="display:inline-block; margin-top: 50px; ">
             test
         </div>
     </div>
     <hr >
-	
+
     <h2>display: flex; align-items: center; </h2>
 	<table>
         <tr>
@@ -62,13 +103,13 @@
         </div>
     </div>
     <hr >
-	
+
     <h2>display: table, table-cell </h2>
     <div class="outer">
         <div class="inner">
-          <div class="centered">
-          </div>
+            <div class="centered">
+            </div>
         </div>
     </div>
 </body>
-</html>
+</html>

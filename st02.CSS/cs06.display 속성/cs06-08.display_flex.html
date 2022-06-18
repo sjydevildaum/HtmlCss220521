@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>display flex</title>
+    <style>
+        /* CSS 초기화 */
+        *  { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+
+        html , body { height: 100%; }
+        body {
+            display: flex;
+            flex-direction: column; /* 자식 태그를 수직으로 배치 시킨다 */
+        }
+        body > div { flex-shrink: 0; }
+        .div1 { background-color: yellow;}
+        .div2 { background-color: orange; flex-grow: 1;}
+    </style>
 </head>
 
 <body>
@@ -21,4 +34,4 @@
     </div>
 </body>
 
-</html>
+</html>
