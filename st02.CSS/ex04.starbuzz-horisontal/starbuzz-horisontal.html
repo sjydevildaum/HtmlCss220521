@@ -24,29 +24,43 @@
           background-color: #675c47;
           margin: 10px;
         }
-
+        #headerSlogan {
+            float: right;
+        }
+        #header::after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+        #tableRow {
+            display: flex;
+        }
         #drinks {
             background-color: #efe5d0 ;
             background-image: url(./images//background.gif);
             background-position: top left;
             margin: 0 10px 10px 10px; /* 테두리 */
             padding: 15px;
+            width: 360px;
         }
 
         #main {
           background-color: #efe5d0 ;
           background-image: url(./images//background.gif);
           background-position: top left;
-          margin: 0 10px 10px 10px; /* 테두리 */
+          margin: 0 10px 10px 0; /* 테두리 */
           padding: 15px;
+          /*  width: calc( 100% - 360px -20px - 250px - 10px); */
+          width: calc( 100% - 640px);
         }
 
         #sidebar {
           background-color: #efe5d0;
           background-image: url( ./images/background.gif);
           background-position: bottom right;
-          margin: 0 10px 10px 10px; /* 테두리 */
+          margin: 0 10px 10px 0; /* 테두리 */
           padding: 15px;
+          width: 250px;
         }
         #footer {
           background-color: #675c47;
@@ -57,6 +71,15 @@
         }
         #sidebar > p.beanheading {
           text-align: center;
+        }
+        #award {
+            position:absolute;
+            top: 15px;
+            left: 600px;
+        }
+        #coupon {
+            position:relative;
+            left: -100px;
         }
     </style>
 </head>
