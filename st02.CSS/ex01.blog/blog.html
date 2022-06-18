@@ -77,6 +77,11 @@
         }
 
         /*서브 메뉴 설정*/
+        ul.outer-menu > li { float:left; position:relative; }
+        ul.outer-menu::after { clear:both; display:block; content:''; }
+        ul.outer-menu > li > ul { display:none; position:absolute; }
+        ul.outer-menu > li:hover > ul { display: block; }
+
         .menu-title {
             display: block; /* span 은 inline 태그 이기 때문에 */
             height: 30px;
@@ -98,7 +103,6 @@
             padding: 5px 10px;
             color: black;
         }
-
         .inner-menu-item > a:hover {
             /*.inner-menu-item 아래의 a 위에 마우스를 올렸을 때 배경색을 검정으로 글자색은 흰색으로 */
             background-color: black;
@@ -286,18 +290,3 @@
     </div>
 </body>
 </html>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.inner-menu').hide();
-
-        $('.outer-menu-item').mouseover(function () {
-            $(this).find('.inner-menu').show();
-        })
-        .mouseout( function () {
-            $(this).find('.inner-menu').hide();
-        });
-    });
-</script>

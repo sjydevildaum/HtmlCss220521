@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ellipsis</title>
+    <title>overflow 속성</title>
+    <style>
+        h1.ellipsis {
+            width: 300px;
+            white-space: nowrap; /* 줄바꿈 안됨 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.ellipsis {
+            width: 300px;
+            white-space: nowrap; /* 줄바꿈 안됨 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 <body>
     <h1 class="ellipsis">

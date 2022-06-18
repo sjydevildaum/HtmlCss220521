@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>position</title>
+    <style>
+        * {padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+
+        #wrap > div {
+            height: 50px;
+            margin: 0 10px 0 10px;
+        }
+        #pos1 { background-color: burlywood;}
+        #pos2 { background-color: chartreuse;}
+        #pos3 { background-color: cornflowerblue;}
+
+        #pos2 {
+            position: relative;
+            left: 200px; /* x축 */
+            top: 200px; /* y축 */
+        }
+        #pos3 {
+            position: absolute;
+            left: 0px; /* x축 */
+            top: 50px; /* y축 */
+            display: block;
+            width: calc( 100% - 20px);
+        }
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -13,4 +37,4 @@
         <div id="pos3">세번째</div>
     </div>
 </body>
-</html>
+</html>

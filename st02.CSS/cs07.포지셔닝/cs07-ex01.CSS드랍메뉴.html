@@ -1,73 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>자식>자식>자식></title>
     <style>
+      /* CSS 초기화 */
+      * {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+      }
+
+      /* 목록 태그 기호 없애기 */
+      ul,
+      li {
+        list-style-type: none;
+      }
+
+      /* a 태그의 밑줄 없애기 */
+      a {
+        text-decoration: none;
+      }
+      div {
+        margin: 100px 50px 0 100px;
+      }
+      /* */
+      #menu1 > li {
+        position: relative;
+      }
+      #menu1 > li > ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100px;
+      }
+      #menu1 > li:hover > ul {
+        display: block;
+      }
+
+      /* menu2 */
+      #menu2 > li {
+        float: left;
+        position: relative;
+      }
+      #menu2::after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+
+      #menu2 > li > a {
+        display: block;
+        width: 150px;
+        height: 30px;
+        border: 1px solid gray;
+        text-align: center;
+        line-height: 30px;
+      }
+      #menu2 > li > a:hover {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      #menu2 > li > ul {
+        display: none;
+        position: absolute;
+      }
+      #menu2 > li:hover > ul {
+        display: block;
+      }
+
+      #menu2 > li > ul > li > a {
+        display: block;
+        width: 150px;
+        height: 30px;
+        border: 1px solid gray;
+        text-align: center;
+        line-height: 30px;
+      }
+      #menu2 > li > ul > li > a:hover {
+        background-color: lightgray;
+        color: #ffffff;
+      }
+
+      /* border 겹치는 부분 해결 */
+      #menu2 > li.others {
+        margin-left: -1px;
+      }
+
+      /* border 겹치는 부분 해결 */
+      #menu2 > li ul > li {
+        margin-top: -1px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <ul id="menu1">
-            <li><a href="#">MENU1</a>
-                <ul>
-                    <li><a href="#">MENU1-1</a></li>
-                    <li><a href="#">MENU1-2</a></li>
-                    <li><a href="#">MENU1-3</a></li>
-                </ul>
-            </li>
+      <ul id="menu1">
+        <li>
+          <a href="#">MENU1</a>
+          <ul>
+            <li><a href="#">MENU1-1</a></li>
+            <li><a href="#">MENU1-2</a></li>
+            <li><a href="#">MENU1-3</a></li>
+          </ul>
+        </li>
 
-            <li><a href="#">MENU2</a>
-                <ul>
-                    <li><a href="#">MENU2-1</a></li>
-                    <li><a href="#">MENU2-2</a></li>
-                    <li><a href="#">MENU2-3</a></li>
-                </ul>
-            </li>
-        </ul>
+        <li>
+          <a href="#">MENU2</a>
+          <ul>
+            <li><a href="#">MENU2-1</a></li>
+            <li><a href="#">MENU2-2</a></li>
+            <li><a href="#">MENU2-3</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
     <div>
-        <ul id="menu2">
-            <li><a href="#">MENU3</a>
-                <ul>
-                    <li><a href="#">MENU3-1</a></li>
-                    <li><a href="#">MENU3-2</a></li>
-                    <li><a href="#">MENU3-3</a></li>
-                </ul>
-            </li>
+      <ul id="menu2">
+        <li>
+          <a href="#">MENU3</a>
+          <ul>
+            <li><a href="#">MENU3-1</a></li>
+            <li><a href="#">MENU3-2</a></li>
+            <li><a href="#">MENU3-3</a></li>
+          </ul>
+        </li>
 
-            <li><a href="#">MENU4</a>
-                <ul>
-                    <li><a href="#">MENU4-1</a></li>
-                    <li><a href="#">MENU4-2</a></li>
-                    <li><a href="#">MENU4-3</a></li>
-                </ul>
-            </li>
-        </ul> <!-- float 해제 -->
+        <li class="others">
+          <a href="#">MENU4</a>
+          <ul>
+            <li><a href="#">MENU4-1</a></li>
+            <li><a href="#">MENU4-2</a></li>
+            <li><a href="#">MENU4-3</a></li>
+          </ul>
+        </li>
+
+        <li class="others">
+          <a href="#">MENU5</a>
+          <ul>
+            <li><a href="#">MENU4-1</a></li>
+            <li><a href="#">MENU4-2</a></li>
+            <li><a href="#">MENU4-3</a></li>
+          </ul>
+        </li>
+
+        <li class="others">
+          <a href="#">MENU6</a>
+          <ul>
+            <li><a href="#">MENU4-1</a></li>
+            <li><a href="#">MENU4-2</a></li>
+            <li><a href="#">MENU4-3</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- float 해제 -->
     </div>
 
     <div>
-        <ul id="menu3">
-            <li><a href="#">MENU5</a>
-                <ul>
-                    <li><a href="#">MENU5-1</a></li>
-                    <li><a href="#">MENU5-2</a></li>
-                    <li><a href="#">MENU5-3</a></li>
-                </ul>
-            </li>
+      <ul id="menu3">
+        <li>
+          <a href="#">MENU5</a>
+          <ul>
+            <li><a href="#">MENU5-1</a></li>
+            <li><a href="#">MENU5-2</a></li>
+            <li><a href="#">MENU5-3</a></li>
+          </ul>
+        </li>
 
-            <li><a href="#">MENU6</a>
-                <ul>
-                    <li><a href="#">MENU6-1</a></li>
-                    <li><a href="#">MENU6-2</a></li>
-                    <li><a href="#">MENU6-3</a></li>
-                </ul>
-            </li>
-        </ul>
+        <li>
+          <a href="#">MENU6</a>
+          <ul>
+            <li><a href="#">MENU6-1</a></li>
+            <li><a href="#">MENU6-2</a></li>
+            <li><a href="#">MENU6-3</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-</body>
+  </body>
 </html>
-
