@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>display flex</title>
+    <title>display flex</title>
     <style>
         /* CSS 초기화 */
-        *  { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: content-box;}
+        * { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: border-box; }
 
+        /* html 페이지에 높이 설정: 100% */
         html , body { height: 100%; }
         body {
             display: flex;
             flex-direction: column; /* 자식 태그를 수직으로 배치 시킨다 */
         }
+        /* 부모 자식으로 찾기 */
         body > div { flex-shrink: 0; }
+
+        
+        /* 클래스 속성 값으로 찾기 */
         .div1 { background-color: yellow;}
         .div2 { background-color: orange; flex-grow: 1;}
     </style>

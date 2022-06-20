@@ -12,15 +12,20 @@
         ul { display: flex; }
         li {
             list-style-type: none;
-            display: inline-block;
-            background-color: aquamarine;
             width: 100px;
             height: 50px;
+            background-color: aquamarine;
             text-align: center; /* 수평:가운데 정렬 */
             line-height: 50px; /* 수직: 중간 정렬 */
         }
+
+        /* 짝수에는 배경색 red 설정 */
         .even { background-color: crimson; }
+
+        /* 첫번째 태그 */
         #first { border-radius: 10px 0 0 10px; }
+
+        /* 마지막 태그 */
         #last { border-radius: 0 10px 10px 0; }
     </style>
 </head>

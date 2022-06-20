@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * { margin: 0 0 0 0; padding: 0 0 0 0; text-align: center; color: white;}
+        * { margin: 0 0 0 0; padding: 0 0 0 0; text-align: center; color: white; box-sizing: border-box; }
         html,body {
             height: 100%;
         }
@@ -20,15 +20,14 @@
         }
         .header {
             min-height: 80px;
-            height: 80px;
             background-color: #ff6b57;
             width: 100%;
         }
         .header > h1 {
             width: 100px;
-            height: 150px;
+            height: 140px;
             position: absolute;
-            top:0;
+            top: 0;
             left: 0;
             background-color: #ff6b57;
         }
@@ -55,10 +54,19 @@
         .popular_post_section {
             width: 30%;
             background-color: #d76817;
+            height: calc( 50% - 80px );
         }
         .banner_section {
+            display:flex;
+            flex-flow:column nowrap;
             width: 20%;
-            background-color: #00d2a5;
+            height: calc( 50% - 80px );
+        }
+        .banner_section div.banner_box_01 {
+            background-color: #0175bb;
+        }
+        .banner_section div.banner_box_02 {
+            background-color: #1261c9;
         }
         .social_section {
             width: 20%;
@@ -66,7 +74,7 @@
         }
         .footer {
             width: 100%;
-            height: 90px;
+            height: 80px;
             background-color: #474747;
         }
     </style>
