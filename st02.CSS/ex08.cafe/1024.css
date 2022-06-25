@@ -1,0 +1,13 @@
+
+.photo {
+  display: none;
+}
+section {
+  display: inline-block;
+}
+#intro, #map {
+  width: 48%;
+}
+#choice {
+  width: 100%;
+}

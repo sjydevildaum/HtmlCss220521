@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>레이아웃 B</title>
+    <style>
+        /* CSS 초기화 */
+        *  { padding: 0 0 0 0; margin: 0 0 0 0; box-sizing: border-box;}
+
+        html,body { height: 100%;}
+        #wrap { display: flex; width: 100%;  height: 100%;}
+        #wrapbody {width: 50%;   height: 100%;}
+        #sidebar { height: 100%; width: 50%; background-color: lightpink;}
+        #header { height: 100px; background-color: aquamarine;}
+        #content { height: calc( 100% - 200px ); background-color: blueviolet;}
+        #footer { height: 100px; background-color: beige;}
+    </style>
 </head>
 
 <body>
@@ -15,18 +27,20 @@
             sidebar
         </div>
 
-        <div id="header">
-            header
-        </div>
+        <div id="wrapbody">
+            <div id="header">
+                header
+            </div>
 
-        <div id="content">
-            content
-        </div>
+            <div id="content">
+                content
+            </div>
 
-        <div id="footer">
-            footer
+            <div id="footer">
+                footer
+            </div>
         </div>
     </div>
 </body>
 
-</html>
+</html>
