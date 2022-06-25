@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>박스모델</title>
+    <style>
+      .container > div > div {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        text-align: center; /* 텍스트의 수평 정렬 */
+        line-height: 100px; /* 텍스트의 수직 정렬 */
+        margin: 20px;
+      }
+      /* div class="box1" */
+      div.box1 {
+        background-color: orange;
+      }
+      /* div class="box2" */
+      div.box2 {
+        background-color: lightblue;
+      }
+      /* div class="box3" */
+      div.box3 {
+        background-color: aquamarine;
+      }
+      /* div class="box4" */
+      div.box4 {
+        border: 1px solid #000000;
+      }
+      /* div class="box5" */
+      div.box5 {
+        border: 1px solid #000000;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .left-items {
+      }
+
+      .right-items {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        display: flex를 사용하여 좌측, 우측 정렬하는 방법
+    </pre>
+    <div class="container">
+      <div class=left-items>
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+        <div class="box3">박스3</div>
+      </div>
+      <div class="right-items">
+        <div class="box4">박스4</div>
+        <div class="box5">박스5</div>
+      </div>
+    </div>
+  </body>
+</html>
